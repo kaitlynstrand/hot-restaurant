@@ -1,9 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>This is a page</title>
+	<meta charset="UTF-8">
+	<title>Hot Resturants</title>
+
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Font Awesome Glyphicons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<!-- Chosen -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+
 </head>
-<body>
-<h1>Welcome Reserve</h1>
+<body style="background: black" >
+	<div>
+		<div class="container">
+
+		<div class="jumbotron" style="border: solid;border-width: 10px;border-color: blue">
+			<padding-top>
+			<h1 class="" style="color:blue"><i class="glyphicon glyphicon-fire" aria-hidden="true"></i> Hot Restaurants</h1>
+					
+					<hr>
+
+					<h2 class="" style="color: blue">Make your reservation.</h2>
+					
+					<br>
+
+					<div class="">
+						<a href="/home"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-home"></span> </h4></button></a>
+						<a href="/tables"><button type="button" class="btn btn-lg btn-danger"><h4><span class="glyphicon glyphicon-list-alt"></span> View Tables</h4></button></a>
+					</div>
+
+				</div>
+		<div class="container">
+			 <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Table Reservation</strong></h3>
+          </div>
+          <div class="panel-body">
+            <form method="POST" role="form">
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+
+              <div class="form-group">
+                <label for="role">Phone Number</label>
+                <input type="text" class="form-control" id="phone">
+              </div>
+
+              <div class="form-group">
+                <label for="age">Email</label>
+                <input type="text" class="form-control" id="email">
+              </div>
+
+              <div class="form-group">
+                <label for="force-points">Unique ID</label>
+                <input type="text" class="form-control" id="uniqueId">
+              </div>
+
+            </form>
+            <br>
+            <div class="text-left">
+              <button type="submit" class="btn btn-primary btn-md" id="submit"><span ></span>Submit</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+		</div>			
+
+	    <footer class="footer">
+	    <div class="container">
+		        <p><a href="/all">API Friends List</a> | <a href="http://git@github.com:lvanok/FriendFinder.git">GitHub Repo</a></p>
+	      </div>
+	    </footer>
+
+	</div>
+
 </body>
 </html>
