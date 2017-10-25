@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<!-- Chosen -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 
@@ -21,10 +22,10 @@
 
 		<div class="jumbotron" style="border: solid;border-width: 10px;border-color: blue">
 			<padding-top>
-			<h1 class="" style="color:blue"><i class="glyphicon glyphicon-heart" aria-hidden="true"></i> Hot Restaurants</h1>
+			<h1 class="" style="color:blue"><i class="glyphicon glyphicon-fire" aria-hidden="true"></i> Hot Restaurants</h1>
 					<hr>
-					<h2 class="" style="color: white">Answer a few basic questions. </h2>
-					<h2 class="" style="color: white">Let's see who you are matched with!</h2>
+					<h2 class="" style="color: white">We only have 5 tables! Book your seat before they all are gone! </h2>
+					
 					<br>
 
 					<div class="">
@@ -68,6 +69,33 @@
 	    </footer>
 
 	</div>
+	<script type="text/javascript">
+    //$("#search-btn").on("click", function() {
+      // var searchedCharacter = $("#character-search").val().trim();
+
+      // searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+      window.onload = function()
+      {
+      $.get("/api/reserve", function(data)
+       {
+        console.log(data);
+        // for (var i = 0; i < data.length; i++)
+        //  { 
+        //  	var user = $("<h3>")
+        //  	user.attr("id",("user-"+i))
+        //  	$("#name").text(data[i].name)
+        //  	$("current-res").append(user)
+
+
+        
+        // }
+        
+      });
+      	
+      }
+
+   // });
+  </script>
 
 </body>
 </html>
