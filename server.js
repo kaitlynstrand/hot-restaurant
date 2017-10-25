@@ -11,6 +11,7 @@ var PORT = process.env.PORT || 3000;
 // server.js
 var routes = require('./app/routes/htmlRoutes.js')
 var api = require('./app/routes/apiRoutes.js')
+//data where we read and write from
 var data = require('./app/data/waitinglistData.js')
 
 // Sets up the Express app to handle data parsing
