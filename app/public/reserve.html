@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<!-- Chosen -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	 <script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 
@@ -87,6 +88,26 @@
 	    </footer>
 
 	</div>
+	<script type="text/javascript">
+    // Question: What does this code do?
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      var newReservation = {
+        name: $("#name").val().trim(),
+        phone: $("#phone").val().trim(),
+        email: $("#email").val().trim(),
+        uniqueId: $("#uniqueId").val().trim()
+      };
+      console.log(newReservation)
+
+      // Question: What does this code do??
+      $.post("/reserve", newReservation)
+      .done(function(data) {
+        console.log(data);
+        alert("Adding reservation...");
+      });
+    });
+  </script>
 
 </body>
 </html>
